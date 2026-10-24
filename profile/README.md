@@ -3,12 +3,16 @@
 [![vector Core](https://github.com/sawai-naoki-portfolio/vector/actions/workflows/core.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/vector/actions/workflows/core.yml)
 [![LiveDesign test](https://github.com/sawai-naoki-portfolio/LiveDesign/actions/workflows/test.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/LiveDesign/actions/workflows/test.yml)
 
-個人で企画から設計・実装・テストまで手がけた 6 作品です。
+個人で企画し、生成 AI（Claude Code）を使って開発した 6 作品です。
 スマートフォンアプリ（Flutter）・Web サービス（Node.js）・ゲーム（Unity）と分野は違いますが、どの作品も
 **「ロジックを UI から切り離してテストする」「やらないことを決めて理由を残す」「設計を図と文書で説明できるようにする」**
 ことを大切にしています。
 
-各リポジトリには、ソースコードのほかに **`Doc/`（要件定義書・画面定義書・設計書・テスト仕様／結果・PlantUML の UML 図・スクリーンショット）** があります。
+**このページの見方**
+
+1. 下の作品一覧で、作品ごとの概要・技術・規模・開発時期をつかむ
+2. 気になった作品の「設計ドキュメント」（`Doc/README.md`）で、伝えたいことと技術的な課題・解決を読む（3 分ほど）
+3. さらに詳しく見るときは、各作品の `Doc/design.md`（設計書・UML 図）と `Doc/test-report.md`（テスト仕様・結果）へ
 
 ### 作品一覧
 
@@ -17,8 +21,9 @@
 <td width="33%" valign="top">
 <a href="https://github.com/sawai-naoki-portfolio/vector"><img src="https://raw.githubusercontent.com/sawai-naoki-portfolio/vector/main/Doc/screenshots/showdown.jpg" alt="VECTOR CASINO RESORT"></a>
 <h3><a href="https://github.com/sawai-naoki-portfolio/vector">VECTOR CASINO RESORT</a></h3>
-10 のオリジナルカジノゲームとカジノ RPG。すべての配当を全列挙・動的計画法で検証し、最善を尽くしてもハウスがわずかに有利になるよう数学で設計。<br>
+10 のオリジナルカジノゲームとカジノ RPG。配当を全列挙・動的計画法（厳密に解けないものはシミュレーション）で検証し、最善に近い打ち方でもハウスがわずかに有利になるよう数学で設計。<br>
 <b>Unity 6 / C#</b> ・ C# 約 28,000 行 ・ テスト 152 件 ・ CI<br>
+2025 年 4 月に原型、2026 年 10 月に作り直し ・ 未公開<br>
 <a href="https://github.com/sawai-naoki-portfolio/vector/blob/main/Doc/README.md">設計ドキュメント</a>
 </td>
 <td width="33%" valign="top">
@@ -26,6 +31,7 @@
 <h3><a href="https://github.com/sawai-naoki-portfolio/LiveDesign">LiveDesign</a></h3>
 配信画面をデザインし、TikTok LIVE のギフトやコメントで動かす Web サービス。ノードをつなぐだけでゲームを作れる実行環境を一から実装。<br>
 <b>Node.js / JavaScript</b> ・ 約 19,600 行 ・ テスト 687 件 ・ CI<br>
+2026 年 8 月〜10 月 ・ 未公開（手元や Docker で起動可）<br>
 <a href="https://github.com/sawai-naoki-portfolio/LiveDesign/blob/main/Doc/README.md">設計ドキュメント</a> ・ <a href="https://github.com/sawai-naoki-portfolio/LiveDesign/blob/main/Doc/api.md">API 仕様書</a>
 </td>
 <td width="33%" valign="top">
@@ -33,6 +39,7 @@
 <h3><a href="https://github.com/sawai-naoki-portfolio/AssetsChecker">Privacy Asset Checker</a></h3>
 サーバーを持たない資産管理アプリ。AES-256 暗号化 DB、暗号化バックアップ、LAN／分割 QR による端末間の引き継ぎ。<br>
 <b>Flutter / Dart</b> ・ 約 9,200 行 ・ テスト 81 件<br>
+2026 年 7 月 ・ 未公開（Google Play 公開準備中）<br>
 <a href="https://github.com/sawai-naoki-portfolio/AssetsChecker/blob/main/Doc/README.md">設計ドキュメント</a>
 </td>
 </tr>
@@ -42,6 +49,7 @@
 <h3><a href="https://github.com/sawai-naoki-portfolio/Tech-Tan">テク単</a></h3>
 情報処理技術者試験（IP / FE / AP）の単語帳と過去問演習。用語 2,176 語・過去問 9,820 問。表記ゆれに強い検索と大量データの遅延読み込み。<br>
 <b>Flutter / Dart</b> ・ 約 10,100 行 ・ テスト 93 件<br>
+2026 年 7 月 ・ 未公開<br>
 <a href="https://github.com/sawai-naoki-portfolio/Tech-Tan/blob/main/Doc/README.md">設計ドキュメント</a>
 </td>
 <td width="33%" valign="top">
@@ -49,6 +57,7 @@
 <h3><a href="https://github.com/sawai-naoki-portfolio/PromptVault">PromptVault</a></h3>
 LLM のプロンプトを 1 タップでコピーする管理アプリ。独自の <code>{{変数}}</code> 記法とパーサ、広告でコア体験を壊さない設計。<br>
 <b>Flutter / Dart</b> ・ 約 4,300 行 ・ テスト 143 件<br>
+2026 年 7 月 ・ 未公開<br>
 <a href="https://github.com/sawai-naoki-portfolio/PromptVault/blob/main/Doc/README.md">設計ドキュメント</a>
 </td>
 <td width="33%" valign="top">
@@ -56,10 +65,32 @@ LLM のプロンプトを 1 タップでコピーする管理アプリ。独自�
 <h3><a href="https://github.com/sawai-naoki-portfolio/SportsStadium">スポーツスタジアム</a></h3>
 バスケ・テニス・ビーチバレーの 3D スポーツゲーム。自前のボール物理と先読み AI、メッシュ・テクスチャ・音をすべて実行時に生成。<br>
 <b>Unity 6 / C#</b> ・ 約 11,000 行 ・ テスト 58 件<br>
+2026 年 10 月 ・ 未公開<br>
 <a href="https://github.com/sawai-naoki-portfolio/SportsStadium/blob/main/Doc/README.md">設計ドキュメント</a>
 </td>
 </tr>
 </table>
+
+いずれもストアや Web ではまだ公開していません。各リポジトリの README に、手元で動かす手順があります。
+
+### 開発の進め方（生成 AI の活用）
+
+6 作品とも、生成 AI のコーディングアシスタント **Claude Code** を使って開発しました。
+
+| | 内容 |
+|---|---|
+| 自分で行ったこと | 企画（何を・誰のために作るか）、仕様決め、設計の判断（何を作らないかを含む）、AI が書いたコードのレビュー、テストでの検証 |
+| AI を活用したこと | 実装と、README・設計資料（`Doc/`）などのドキュメント作成 |
+| 動作を確かめる仕組み | ロジックを UI から切り離した単体テスト、GitHub Actions の CI（VECTOR・LiveDesign）、配当の全列挙とシミュレーションによる裏付け（VECTOR）、依存の向きを強制する構造テスト（LiveDesign） |
+
+| 作品 | 開発時期（コミットの記録） |
+|---|---|
+| VECTOR CASINO RESORT | 2025 年 4 月に Unity・C# に初めて挑戦して原型を制作（14 日間）、2026 年 10 月 21〜22 日に設計から作り直し |
+| LiveDesign | 2026 年 8 月 11 日〜10 月 18 日 |
+| Privacy Asset Checker | 2026 年 7 月 28〜30 日 |
+| テク単 | 2026 年 7 月 28〜29 日 |
+| PromptVault | 2026 年 7 月 28 日 |
+| スポーツスタジアム | 2026 年 10 月 20〜21 日 |
 
 ### 見どころ
 
@@ -67,8 +98,8 @@ LLM のプロンプトを 1 タップでコピーする管理アプリ。独自�
 |---|---|---|---|
 | [VECTOR CASINO RESORT](https://github.com/sawai-naoki-portfolio/vector) | ゲーム | Unity 6, C#, .NET 8, GitHub Actions | 数学による配当設計（厳密 RTP の検証）、Unity 非依存のルールエンジン、テンプレートメソッドで 10 ゲームを共通化、HMAC によるセーブ保護 |
 | [LiveDesign](https://github.com/sawai-naoki-portfolio/LiveDesign) | Web サービス | Node.js 22, Express 5, WebSocket, SQLite, OAuth 2.0, Docker | ノード式プログラミングの実行器、`eval` を使わない式の解釈、Web セキュリティ（CSRF・XSS・総当たり・セッション）、依存の向きをテストで強制 |
-| [Privacy Asset Checker](https://github.com/sawai-naoki-portfolio/AssetsChecker) | モバイル | Flutter, Riverpod, SQLCipher, Keychain / Keystore, Kotlin / Swift | 通信しない設計、暗号の検証（既知ベクタ・平文残留）、LAN／分割 QR の引き継ぎプロトコル、課金の取りこぼし対策 |
-| [テク単](https://github.com/sawai-naoki-portfolio/Tech-Tan) | モバイル | Flutter, Riverpod, AdMob | 選択肢 3 形式の正規化、表記ゆれの正規化（収録率 32.7% → 46.8%）、19MB の JSON の遅延読み込み、データ整合性テスト、第三者著作物の権利処理 |
+| [Privacy Asset Checker](https://github.com/sawai-naoki-portfolio/AssetsChecker) | モバイル | Flutter, Riverpod, SQLCipher, Keychain / Keystore, Kotlin / Swift | サーバーを持たない設計（通信は課金と LAN 引き継ぎだけ）、暗号の検証（既知ベクタ・平文残留）、LAN／分割 QR の引き継ぎプロトコル、課金の取りこぼし対策 |
+| [テク単](https://github.com/sawai-naoki-portfolio/Tech-Tan) | モバイル | Flutter, Riverpod, AdMob | 選択肢 3 形式の正規化、表記ゆれの正規化（収録率 32.7% → 46.8%）、大容量の過去問 JSON（解説込みで約 19MB）の遅延読み込み、データ整合性テスト、第三者著作物の権利処理 |
 | [PromptVault](https://github.com/sawai-naoki-portfolio/PromptVault) | モバイル | Flutter, Riverpod 3, Hive, 課金, AdMob | 独自の変数記法とパーサ、Free / Pro の機能差を 1 か所に集約、確認ダイアログより「元に戻す」、差し替え可能な設計でテスト |
 | [スポーツスタジアム](https://github.com/sawai-naoki-portfolio/SportsStadium) | ゲーム | Unity 6, URP, Input System | 解析解で積分する決定論的なボール物理、成否を確率で決めて物理に任せるシュート、3 種目で共通の役割分担、最後まで自動対戦する PlayMode テスト |
 
@@ -80,18 +111,18 @@ LLM のプロンプトを 1 タップでコピーする管理アプリ。独自�
 | Web（Node.js / JavaScript） | Express 5、WebSocket、node:sqlite・マイグレーション、scrypt・セッション・OAuth 2.0、CSRF / XSS / CSP 対策、Canvas・Web Audio、ノード式ビジュアルプログラミングの実行器、Docker・Caddy | LiveDesign |
 | ゲーム（Unity / C#） | Unity 6・URP・uGUI、Input System、自前のボール物理・先読み AI、手続き的生成（メッシュ・テクスチャ・音）、テンプレートメソッド・SOLID、HMAC によるセーブ改ざん検知 | VECTOR CASINO RESORT・スポーツスタジアム |
 | 数理・アルゴリズム | 確率の全列挙・動的計画法、後ろ向き帰納（最善手）、モンテカルロ検証、表記ゆれの正規化、PBKDF2・AES-GCM | VECTOR CASINO RESORT・テク単・Privacy Asset Checker |
-| 品質・開発プロセス | 単体・結合・ウィジェット・PlayMode テスト、GitHub Actions（CI）、構造テスト（依存の向き）、静的解析（警告ゼロ）、要件定義・画面定義・UML | 全作品 |
+| 品質・開発プロセス | 単体・結合・ウィジェット・PlayMode テスト、GitHub Actions（CI）、構造テスト（依存の向き）、静的解析、要件定義・画面定義・UML、生成 AI を使った開発 | 全作品（CI は VECTOR・LiveDesign、PlayMode テストはスポーツスタジアム、構造テストは LiveDesign） |
 
 ### テストの実行結果（公開版の作成時に再実行したもの）
 
 | 作品 | コマンド | 結果 |
 |---|---|---|
 | LiveDesign | `npm test`（Node.js 22.22） | 7 ファイル・687 件すべて成功 |
-| VECTOR CASINO RESORT | `dotnet test Tools/CoreTests`（.NET 8） | 137 件すべて成功、全ゲームの厳密 RTP が設計値と一致 |
+| VECTOR CASINO RESORT | `dotnet test Tools/CoreTests` と `Tools/Simulator`（.NET 8） | テスト 137 件すべて成功。厳密に計算できるゲームの RTP が設計値と一致 |
 | スポーツスタジアム | `TennisScoreTests`（Unity 非依存の部分を .NET 8 で） | 9 件すべて成功 |
 
 VECTOR CASINO RESORT と LiveDesign は、プッシュごとに GitHub Actions でも同じテストを実行しています（上のバッジ）。
-Flutter の 3 作品と Unity のテストは、各作品の開発環境（Flutter 3.44 / Unity 6000.6）で実行しています。結果は各リポジトリの `Doc/test-report.md` を参照してください。
+Flutter の 3 作品と Unity のテストは、公開版の作成時には再実行していません（作業環境に Flutter・Unity がないため）。テストの内容と件数は、各リポジトリの `Doc/test-report.md` にあります。
 
 <details>
 <summary><b>公開にあたって</b></summary>
@@ -105,11 +136,11 @@ Flutter の 3 作品と Unity のテストは、各作品の開発環境（Flutt
 | テク単の、収集元サイトが書いた過去問の解説文 | 第三者の著作物のため。自前で書き直した解説（100 問）だけを収録し、スクリーンショットの解説文もぼかしている |
 | テク単の、使っていないデスクトップ／Web 向けのプラットフォームフォルダ | 対象は Android / iOS のため |
 
+VECTOR CASINO RESORT のパッケージ名（`com.dorachan121.vector`）やストア用の資料に出てくる「dorachan121」は、開発に使っている個人アカウントの名前です。
+
 </details>
 
 ### 作者
 
 - **名前:** 澤井直輝
 - **連絡先:** naoki.sawai1201@gmail.com
-
-ライセンスは各作品の README を参照してください。
