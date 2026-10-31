@@ -3,8 +3,9 @@
 [![vector Core](https://github.com/sawai-naoki-portfolio/vector/actions/workflows/core.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/vector/actions/workflows/core.yml)
 [![LiveDesign test](https://github.com/sawai-naoki-portfolio/LiveDesign/actions/workflows/test.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/LiveDesign/actions/workflows/test.yml)
 [![SWING-LLM CI](https://github.com/sawai-naoki-portfolio/SWING-LLM/actions/workflows/ci.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/SWING-LLM/actions/workflows/ci.yml)
+[![bokitan-app test](https://github.com/sawai-naoki-portfolio/bokitan-app/actions/workflows/test.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/bokitan-app/actions/workflows/test.yml)
 
-個人で企画し、生成 AI（Claude Code）を使って開発した 7 作品です。
+個人で企画し、生成 AI（Claude Code）を使って開発した 8 作品です。
 スマートフォンアプリ（Flutter）・Web サービス（Node.js）・ゲーム（Unity）・AI（Python / PyTorch）と分野は違いますが、どの作品も
 **「ロジックを UI から切り離してテストする」「やらないことを決めて理由を残す」「設計を図と文書で説明できるようにする」**
 ことを大切にしています。
@@ -79,22 +80,29 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 2026 年 6 月〜10 月 ・ 未公開（学習済みの重みは含まない）<br>
 <a href="https://github.com/sawai-naoki-portfolio/SWING-LLM/blob/main/Doc/README.md">設計ドキュメント</a> ・ <a href="https://github.com/sawai-naoki-portfolio/SWING-LLM/blob/main/Doc/api.md">API 仕様書</a>
 </td>
-<td width="33%" valign="top"></td>
+<td width="33%" valign="top">
+<a href="https://github.com/sawai-naoki-portfolio/bokitan-app"><img src="https://raw.githubusercontent.com/sawai-naoki-portfolio/bokitan-app/main/Doc/screenshots/01_search.png" alt="簿記単" width="60%"></a>
+<h3><a href="https://github.com/sawai-naoki-portfolio/bokitan-app">簿記単</a></h3>
+簿記用語 1,373 語と仕訳問題 270 問の単語帳アプリ。同梱データを貸借一致などで検証するテスト、消去法で解けない勘定科目の選択肢、起動直後の操作で保存データを失わない読み込み待ち。<br>
+<b>Flutter / Dart</b> ・ 約 8,300 行 ・ テスト 34 件 ・ CI<br>
+2025 年 5〜7 月に初期開発、2026 年 7 月・10 月に改修<br>
+<a href="https://github.com/sawai-naoki-portfolio/bokitan-app/blob/main/Doc/README.md">設計ドキュメント</a>
+</td>
 <td width="33%" valign="top"></td>
 </tr>
 </table>
 
-いずれもストアや Web ではまだ公開していません。各リポジトリの README に、手元で動かす手順があります。
+簿記単以外の 7 作品は、ストアや Web ではまだ公開していません。各リポジトリの README に、手元で動かす手順があります。
 
 ### 開発の進め方（生成 AI の活用）
 
-7 作品とも、生成 AI のコーディングアシスタント **Claude Code** を使って開発しました。
+8 作品とも、生成 AI のコーディングアシスタント **Claude Code** を使って開発しました。
 
 | | 内容 |
 |---|---|
 | 自分で行ったこと | 企画（何を・誰のために作るか）、仕様決め、設計の判断（何を作らないかを含む）、AI が書いたコードのレビュー、テストでの検証 |
 | AI を活用したこと | 実装と、README・設計資料（`Doc/`）などのドキュメント作成 |
-| 動作を確かめる仕組み | ロジックを UI から切り離した単体テスト、GitHub Actions の CI（VECTOR・LiveDesign・SWING-LLM）、配当の全列挙とシミュレーションによる裏付け（VECTOR）、依存の向きを強制する構造テスト（LiveDesign）、学習パイプラインに組み込んだ評価ゲート（SWING-LLM） |
+| 動作を確かめる仕組み | ロジックを UI から切り離した単体テスト、GitHub Actions の CI（VECTOR・LiveDesign・SWING-LLM・簿記単）、配当の全列挙とシミュレーションによる裏付け（VECTOR）、依存の向きを強制する構造テスト（LiveDesign）、学習パイプラインに組み込んだ評価ゲート（SWING-LLM） |
 
 | 作品 | 開発時期（コミットの記録） |
 |---|---|
@@ -105,6 +113,7 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 | PromptVault | 2026 年 7 月 28 日 |
 | スポーツスタジアム | 2026 年 10 月 20〜21 日 |
 | SWING-LLM | 2026 年 6 月 23 日〜7 月 17 日、10 月 25 日 |
+| 簿記単 | 2025 年 5〜7 月（初期開発）、2026 年 7 月・10 月（改修・リリース準備・ドキュメント整備） |
 
 ### 見どころ
 
@@ -117,17 +126,18 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 | [PromptVault](https://github.com/sawai-naoki-portfolio/PromptVault) | モバイル | Flutter, Riverpod 3, Hive, 課金, AdMob | 独自の変数記法とパーサ、Free / Pro の機能差を 1 か所に集約、確認ダイアログより「元に戻す」、差し替え可能な設計でテスト |
 | [スポーツスタジアム](https://github.com/sawai-naoki-portfolio/SportsStadium) | ゲーム | Unity 6, URP, Input System | 解析解で積分する決定論的なボール物理、成否を確率で決めて物理に任せるシュート、3 種目で共通の役割分担、最後まで自動対戦する PlayMode テスト |
 | [SWING-LLM](https://github.com/sawai-naoki-portfolio/SWING-LLM) | AI | Python 3.12, PyTorch, FastAPI, WebSocket, SentencePiece, FAISS, GitHub Actions | MLA・MoE・MTP の LLM を部品から自作、止まっても壊れない学習パイプライン（アトミックな保存・中断できるコーパス作成）、評価ゲートで弱点も数値で記録、声のクローンの同意ゲートと電子透かし、サンドボックスと Web の境界防御 |
+| [簿記単](https://github.com/sawai-naoki-portfolio/bokitan-app) | モバイル | Flutter, Riverpod, shared_preferences, AdMob, GitHub Actions | 起動直後の操作で保存データが巻き戻らない読み込み待ち、同梱データを直接検証するテスト（貸借一致・ID 重複）で見つけた問題データの誤りを修正、誤答候補を混ぜた最低 10 択の勘定科目で消去法を防止、JSON のパースを別 isolate へ、広告 ID をソースに置かない注入 |
 
 ### スキル
 
 | 分野 | 技術 | 使った作品 |
 |---|---|---|
-| モバイル（Flutter / Dart） | Riverpod 2 / 3、SQLite + SQLCipher（AES-256）、Hive、Keychain / Keystore、生体認証・ローカル通知・QR、アプリ内課金・AdMob、MethodChannel（Kotlin / Swift） | Privacy Asset Checker・テク単・PromptVault |
+| モバイル（Flutter / Dart） | Riverpod 2 / 3、SQLite + SQLCipher（AES-256）、Hive、Keychain / Keystore、生体認証・ローカル通知・QR、アプリ内課金・AdMob、MethodChannel（Kotlin / Swift） | Privacy Asset Checker・テク単・PromptVault・簿記単 |
 | Web（Node.js / JavaScript） | Express 5、WebSocket、node:sqlite・マイグレーション、scrypt・セッション・OAuth 2.0、CSRF / XSS / CSP 対策、Canvas・Web Audio、ノード式ビジュアルプログラミングの実行器、Docker・Caddy | LiveDesign |
 | ゲーム（Unity / C#） | Unity 6・URP・uGUI、Input System、自前のボール物理・先読み AI、手続き的生成（メッシュ・テクスチャ・音）、テンプレートメソッド・SOLID、HMAC によるセーブ改ざん検知 | VECTOR CASINO RESORT・スポーツスタジアム |
 | AI・機械学習（Python / PyTorch） | Transformer（Multi-Head Latent Attention・Sparse MoE・RoPE・KV キャッシュ・投機的デコード）、事前学習・SFT・DPO・GRPO・LoRA、RAG（BM25・FAISS・RRF・Self-RAG）、TTS（ニューラル音声コーデック・Flow Matching）、画像生成（VAE・DiT・Rectified Flow）、評価設計、FastAPI・WebSocket | SWING-LLM |
 | 数理・アルゴリズム | 確率の全列挙・動的計画法、後ろ向き帰納（最善手）、モンテカルロ検証、表記ゆれの正規化、PBKDF2・AES-GCM | VECTOR CASINO RESORT・テク単・Privacy Asset Checker |
-| 品質・開発プロセス | 単体・結合・ウィジェット・PlayMode テスト、GitHub Actions（CI）、構造テスト（依存の向き）、静的解析、要件定義・画面定義・UML、生成 AI を使った開発 | 全作品（CI は VECTOR・LiveDesign・SWING-LLM、PlayMode テストはスポーツスタジアム、構造テストは LiveDesign） |
+| 品質・開発プロセス | 単体・結合・ウィジェット・PlayMode テスト、GitHub Actions（CI）、構造テスト（依存の向き）、静的解析、要件定義・画面定義・UML、生成 AI を使った開発 | 全作品（CI は VECTOR・LiveDesign・SWING-LLM・簿記単、PlayMode テストはスポーツスタジアム、構造テストは LiveDesign） |
 
 ### テストの実行結果（公開版の作成時に再実行したもの）
 
@@ -137,9 +147,10 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 | VECTOR CASINO RESORT | `dotnet test Tools/CoreTests` と `Tools/Simulator`（.NET 8） | テスト 137 件すべて成功。厳密に計算できるゲームの RTP が設計値と一致 |
 | スポーツスタジアム | `TennisScoreTests`（Unity 非依存の部分を .NET 8 で） | 9 件すべて成功 |
 | SWING-LLM | `python -m tests.run_unit_tests`・ruff・mypy（Python 3.12、CPU） | 80 ファイル・762 件で失敗 0（学習済みの重み・外部 API が必要な 7 件はスキップ）。静的解析も問題なし |
+| 簿記単 | `flutter test`・`flutter analyze`（Flutter 3.47.8） | 34 件すべて成功。静的解析の指摘なし |
 
-VECTOR CASINO RESORT・LiveDesign・SWING-LLM は、プッシュごとに GitHub Actions でも同じテストを実行しています（上のバッジ）。
-Flutter の 3 作品と Unity のテストは、公開版の作成時には再実行していません（作業環境に Flutter・Unity がないため）。テストの内容と件数は、各リポジトリの `Doc/test-report.md` にあります。
+VECTOR CASINO RESORT・LiveDesign・SWING-LLM・簿記単は、プッシュごとに GitHub Actions でも同じテストを実行しています（上のバッジ）。
+簿記単以外の Flutter の 3 作品と Unity のテストは、公開版の作成時には再実行していません（作業環境に Flutter・Unity がないため）。テストの内容と件数は、各リポジトリの `Doc/test-report.md` にあります。
 
 <details>
 <summary><b>公開にあたって</b></summary>
