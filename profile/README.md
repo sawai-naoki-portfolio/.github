@@ -4,6 +4,10 @@
 [![LiveDesign test](https://github.com/sawai-naoki-portfolio/LiveDesign/actions/workflows/test.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/LiveDesign/actions/workflows/test.yml)
 [![SWING-LLM CI](https://github.com/sawai-naoki-portfolio/SWING-LLM/actions/workflows/ci.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/SWING-LLM/actions/workflows/ci.yml)
 [![bokitan-app test](https://github.com/sawai-naoki-portfolio/bokitan-app/actions/workflows/test.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/bokitan-app/actions/workflows/test.yml)
+[![AssetsChecker test](https://github.com/sawai-naoki-portfolio/AssetsChecker/actions/workflows/test.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/AssetsChecker/actions/workflows/test.yml)
+[![Tech-Tan test](https://github.com/sawai-naoki-portfolio/Tech-Tan/actions/workflows/test.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/Tech-Tan/actions/workflows/test.yml)
+[![PromptVault test](https://github.com/sawai-naoki-portfolio/PromptVault/actions/workflows/test.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/PromptVault/actions/workflows/test.yml)
+[![SportsStadium core](https://github.com/sawai-naoki-portfolio/SportsStadium/actions/workflows/core.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/SportsStadium/actions/workflows/core.yml)
 [![fanT CI](https://github.com/sawai-naoki-portfolio/fanT/actions/workflows/ci.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/fanT/actions/workflows/ci.yml)
 
 個人で企画し、生成 AI（Claude Code）を使って開発した 10 作品です。
@@ -41,7 +45,7 @@
 <a href="https://github.com/sawai-naoki-portfolio/AssetsChecker"><img src="https://raw.githubusercontent.com/sawai-naoki-portfolio/AssetsChecker/main/Doc/screenshots/01-allocation.png" alt="Privacy Asset Checker" width="60%"></a>
 <h3><a href="https://github.com/sawai-naoki-portfolio/AssetsChecker">Privacy Asset Checker</a></h3>
 サーバーを持たない資産管理アプリ。AES-256 暗号化 DB、暗号化バックアップ、LAN／分割 QR による端末間の引き継ぎ。<br>
-<b>Flutter / Dart</b> ・ 約 9,200 行 ・ テスト 81 件<br>
+<b>Flutter / Dart</b> ・ 約 9,200 行 ・ テスト 81 件 ・ CI<br>
 2026 年 7 月 ・ 未公開（Google Play 公開準備中）<br>
 <a href="https://github.com/sawai-naoki-portfolio/AssetsChecker/blob/main/Doc/README.md">設計ドキュメント</a>
 </td>
@@ -51,7 +55,7 @@
 <a href="https://github.com/sawai-naoki-portfolio/Tech-Tan"><img src="https://raw.githubusercontent.com/sawai-naoki-portfolio/Tech-Tan/main/Doc/screenshots/03_quiz.png" alt="テク単" width="60%"></a>
 <h3><a href="https://github.com/sawai-naoki-portfolio/Tech-Tan">テク単</a></h3>
 情報処理技術者試験（IP / FE / AP）の単語帳と過去問演習。用語 2,176 語・過去問 9,820 問。表記ゆれに強い検索と大量データの遅延読み込み。<br>
-<b>Flutter / Dart</b> ・ 約 10,100 行 ・ テスト 93 件<br>
+<b>Flutter / Dart</b> ・ 約 10,100 行 ・ テスト 93 件 ・ CI<br>
 2026 年 7 月 ・ 未公開<br>
 <a href="https://github.com/sawai-naoki-portfolio/Tech-Tan/blob/main/Doc/README.md">設計ドキュメント</a>
 </td>
@@ -59,7 +63,7 @@
 <a href="https://github.com/sawai-naoki-portfolio/PromptVault"><img src="https://raw.githubusercontent.com/sawai-naoki-portfolio/PromptVault/main/Doc/screenshots/04_variable_form.png" alt="PromptVault" width="60%"></a>
 <h3><a href="https://github.com/sawai-naoki-portfolio/PromptVault">PromptVault</a></h3>
 LLM のプロンプトを 1 タップでコピーする管理アプリ。独自の <code>{{変数}}</code> 記法とパーサ、広告でコア体験を壊さない設計。<br>
-<b>Flutter / Dart</b> ・ 約 4,300 行 ・ テスト 143 件<br>
+<b>Flutter / Dart</b> ・ 約 4,300 行 ・ テスト 143 件 ・ CI<br>
 2026 年 7 月 ・ 未公開<br>
 <a href="https://github.com/sawai-naoki-portfolio/PromptVault/blob/main/Doc/README.md">設計ドキュメント</a>
 </td>
@@ -67,7 +71,7 @@ LLM のプロンプトを 1 タップでコピーする管理アプリ。独自�
 <a href="https://github.com/sawai-naoki-portfolio/SportsStadium"><img src="https://raw.githubusercontent.com/sawai-naoki-portfolio/SportsStadium/main/Doc/screenshots/10-basketball.jpg" alt="スポーツスタジアム"></a>
 <h3><a href="https://github.com/sawai-naoki-portfolio/SportsStadium">スポーツスタジアム</a></h3>
 バスケ・テニス・ビーチバレーの 3D スポーツゲーム。自前のボール物理と先読み AI、メッシュ・テクスチャ・音をすべて実行時に生成。<br>
-<b>Unity 6 / C#</b> ・ 約 11,000 行 ・ テスト 58 件<br>
+<b>Unity 6 / C#</b> ・ 約 11,000 行 ・ テスト 58 件 ・ CI（Unity 非依存部分）<br>
 2026 年 10 月 ・ 未公開<br>
 <a href="https://github.com/sawai-naoki-portfolio/SportsStadium/blob/main/Doc/README.md">設計ドキュメント</a>
 </td>
@@ -122,7 +126,7 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 |---|---|
 | 自分で行ったこと | 企画（何を・誰のために作るか）、仕様決め、設計の判断（何を作らないかを含む）、AI が書いたコードのレビュー、テストでの検証 |
 | AI を活用したこと | 実装と、README・設計資料（`Doc/`）などのドキュメント作成 |
-| 動作を確かめる仕組み | ロジックを UI から切り離した単体テスト、GitHub Actions の CI（VECTOR・LiveDesign・SWING-LLM・簿記単・fanT）、配当の全列挙とシミュレーションによる裏付け（VECTOR）、依存の向きを強制する構造テスト（LiveDesign）、学習パイプラインに組み込んだ評価ゲート（SWING-LLM） |
+| 動作を確かめる仕組み | ロジックを UI から切り離した単体テスト、GitHub Actions の CI（VECTOR・LiveDesign・Privacy Asset Checker・テク単・PromptVault・SWING-LLM・簿記単・fanT。スポーツスタジアムは Unity 非依存の部分のみ）、配当の全列挙とシミュレーションによる裏付け（VECTOR）、依存の向きを強制する構造テスト（LiveDesign）、学習パイプラインに組み込んだ評価ゲート（SWING-LLM） |
 
 | 作品 | 開発時期（コミットの記録） |
 |---|---|
@@ -161,9 +165,9 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 | ゲーム（Unity / C#） | Unity 6・URP・uGUI、Input System、自前のボール物理・先読み AI、手続き的生成（メッシュ・テクスチャ・音）、テンプレートメソッド・SOLID、HMAC によるセーブ改ざん検知、決定的なルールエンジンと参照解法による自動プレイ | VECTOR CASINO RESORT・スポーツスタジアム・ピース・オブ・ケーキ |
 | AI・機械学習（Python / PyTorch） | Transformer（Multi-Head Latent Attention・Sparse MoE・RoPE・KV キャッシュ・投機的デコード）、事前学習・SFT・DPO・GRPO・LoRA、RAG（BM25・FAISS・RRF・Self-RAG）、TTS（ニューラル音声コーデック・Flow Matching）、画像生成（VAE・DiT・Rectified Flow）、評価設計、FastAPI・WebSocket | SWING-LLM |
 | 数理・アルゴリズム | 確率の全列挙・動的計画法、後ろ向き帰納（最善手）、モンテカルロ検証、表記ゆれの正規化、PBKDF2・AES-GCM | VECTOR CASINO RESORT・テク単・Privacy Asset Checker |
-| 品質・開発プロセス | 単体・結合・ウィジェット・PlayMode テスト、GitHub Actions（CI）、構造テスト（依存の向き）、静的解析、要件定義・画面定義・UML、生成 AI を使った開発 | 全作品（CI は VECTOR・LiveDesign・SWING-LLM・簿記単・fanT、PlayMode テストはスポーツスタジアム、構造テストは LiveDesign） |
+| 品質・開発プロセス | 単体・結合・ウィジェット・PlayMode テスト、GitHub Actions（CI）、構造テスト（依存の向き）、静的解析、要件定義・画面定義・UML、生成 AI を使った開発 | 全作品（CI は VECTOR・LiveDesign・Privacy Asset Checker・テク単・PromptVault・SWING-LLM・簿記単・fanT とスポーツスタジアム（Unity 非依存の部分のみ）、PlayMode テストはスポーツスタジアム、構造テストは LiveDesign） |
 
-### テストの実行結果（公開版の作成時に再実行したもの）
+### テストの実行結果（公開版の作成時に再実行したもの、および GitHub Actions で成功を確認したもの）
 
 | 作品 | コマンド | 結果 |
 |---|---|---|
@@ -172,9 +176,14 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 | スポーツスタジアム | `TennisScoreTests`（Unity 非依存の部分を .NET 8 で） | 9 件すべて成功 |
 | SWING-LLM | `python -m tests.run_unit_tests`・ruff・mypy（Python 3.12、CPU） | 80 ファイル・762 件で失敗 0（学習済みの重み・外部 API が必要な 7 件はスキップ）。静的解析も問題なし |
 | 簿記単 | `flutter test`・`flutter analyze`（Flutter 3.47.8） | 34 件すべて成功。静的解析の指摘なし |
+| Privacy Asset Checker | GitHub Actions `test.yml`（`flutter analyze`・`flutter test`） | main で成功（手元では再実行していない） |
+| テク単 | GitHub Actions `test.yml`（`flutter analyze`・`flutter test`） | main で成功（手元では再実行していない） |
+| PromptVault | GitHub Actions `test.yml`（`flutter analyze`・`flutter test`） | main で成功。143 件 pass、画像生成用の 7 件は skip（`Doc/test-report.md`）。手元では再実行していない |
+| スポーツスタジアム（CI） | GitHub Actions `core.yml`（Unity 非依存の `TennisScoreTests` を .NET 8 で） | main で成功。Unity の EditMode / PlayMode は CI では実行していない |
+| fanT | GitHub Actions `ci.yml` | main で成功。モバイルの Vitest は 50 ファイル・257 テストすべて成功（`docs/requirements/08-implementation-status.md`）。手元では再実行していない |
 
-VECTOR CASINO RESORT・LiveDesign・SWING-LLM・簿記単・fanT は、プッシュごとに GitHub Actions でも同じテストを実行しています（上のバッジ）。
-簿記単以外の Flutter の 3 作品と Unity のテストは、公開版の作成時には再実行していません（作業環境に Flutter・Unity がないため）。ピース・オブ・ケーキ（EditMode テスト 53 件）と fanT も再実行していません。この 2 作品の件数・行数は、ソースを静的に数えた値です（ピース・オブ・ケーキの内訳は `Docs/06_Testing.md`）。fanT の CI の実行結果は、今回は確認していません。テストの内容と件数は、各リポジトリの `Doc/test-report.md`（ピース・オブ・ケーキは `Docs/06_Testing.md`）にあります。
+VECTOR CASINO RESORT・LiveDesign・SWING-LLM・簿記単・fanT は、プッシュごとに GitHub Actions でも同じテストを実行しています（上のバッジ）。Privacy Asset Checker・テク単・PromptVault も、GitHub Actions（`test.yml`）で `flutter analyze` と `flutter test` を実行し、各 main で成功を確認しました。スポーツスタジアムの CI（`core.yml`）が実行するのは、Unity 非依存の `TennisScoreTests`（9 件）だけです。
+再実行していないのは、Unity の EditMode / PlayMode テスト（スポーツスタジアム、ピース・オブ・ケーキ、VECTOR の Unity 側）と、ピース・オブ・ケーキの全テストです（作業環境に Unity がないため）。ピース・オブ・ケーキ（EditMode テスト 53 件）の件数・行数は、ソースを静的に数えた値です（内訳は `Docs/06_Testing.md`）。テストの内容と件数は、各リポジトリの `Doc/test-report.md`（ピース・オブ・ケーキは `Docs/06_Testing.md`）にあります。
 
 <details>
 <summary><b>公開にあたって</b></summary>
