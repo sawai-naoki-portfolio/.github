@@ -141,6 +141,27 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 | ピース・オブ・ケーキ | 2026 年 10 月 31 日〜11 月 1 日 |
 | fanT | 2026 年 10 月 24〜31 日 |
 
+### PR 運用の実例
+
+元の開発リポジトリ（非公開の RealTennis。Unreal Engine 5.8 / C++。公開版への追加は**準備中**）では、`main` へは PR 経由でのみ変更を入れる規約で開発しています。対応内容ごとにブランチを切り、細かくコミットし、CI（文書・設定の検査と C++ のビルド・自動テスト）が通ってからマージします。PR 番号は #93 まで進んでいます。
+
+| PR | タイトル | 何を直したか／なぜか（タイトルから読み取れる範囲） |
+|---|---|---|
+| #85 | ci: 画面なしのテストの実行で MCP のサーバーを起動しない | CI の、画面なしでのテスト実行時に MCP のサーバーを起動しないようにした |
+| #87 | refactor: 規約と実装の食い違いをなくす（rpm の変換・SimDt・データの名前・CI の記述） | 規約と実装が食い違っていた箇所（rpm の変換・SimDt・データの名前・CI の記述）をそろえた |
+| #88 | feat: 打点の探索の設計と到達時間 TennisReach::TimeToReach（W-3.3 その 1） | 打点の探索の設計と、到達時間 `TennisReach::TimeToReach` を追加した（W-3.3 の第 1 弾） |
+| #90 | fix: ボールを TG_PrePhysics で最初に進め、選手をその後に処理する（ARCH-01 §5） | ボールを `TG_PrePhysics` で先に進め、選手をその後に処理する順序にした（ARCH-01 §5 に関わる修正） |
+| #92 | docs: モジュール設計とクラス図を実装に合わせる（ARCH-02・UML-02） | モジュール設計とクラス図を、実装に合わせて更新した |
+| #93 | build: テストのモジュールは unity build でまとめない | テストのモジュールを unity build でまとめないようにした |
+
+公開版の作品にも、CI の追加などを PR 経由でマージした記録があります。
+
+- [fanT PR #1](https://github.com/sawai-naoki-portfolio/fanT/pull/1)・[#3](https://github.com/sawai-naoki-portfolio/fanT/pull/3)
+- [SportsStadium PR #1](https://github.com/sawai-naoki-portfolio/SportsStadium/pull/1)（Unity 非依存テストの CI）
+- [Tech-Tan PR #1](https://github.com/sawai-naoki-portfolio/Tech-Tan/pull/1)・[#2](https://github.com/sawai-naoki-portfolio/Tech-Tan/pull/2)（#2 は CI の追加）
+- [AssetsChecker PR #1](https://github.com/sawai-naoki-portfolio/AssetsChecker/pull/1)（CI の追加）
+- [PromptVault PR #1](https://github.com/sawai-naoki-portfolio/PromptVault/pull/1)（CI の追加）
+
 ### 見どころ
 
 | 作品 | 分野 | 主な技術 | 見どころ |
@@ -208,3 +229,7 @@ VECTOR CASINO RESORT のパッケージ名（`com.dorachan121.vector`）やス�
 
 - **名前:** 澤井直輝
 - **連絡先:** naoki.sawai1201@gmail.com
+
+### 連絡先
+
+メール: naoki.sawai1201@gmail.com
