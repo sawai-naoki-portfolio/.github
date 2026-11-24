@@ -10,8 +10,8 @@
 [![SportsStadium core](https://github.com/sawai-naoki-portfolio/SportsStadium/actions/workflows/core.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/SportsStadium/actions/workflows/core.yml)
 [![fanT CI](https://github.com/sawai-naoki-portfolio/fanT/actions/workflows/ci.yml/badge.svg)](https://github.com/sawai-naoki-portfolio/fanT/actions/workflows/ci.yml)
 
-個人で企画し、生成 AI（Claude Code）を使って開発した 10 作品です。
-スマートフォンアプリ（Flutter・React Native）・Web サービス（Node.js）・ゲーム（Unity）・AI（Python / PyTorch）と分野は違いますが、どの作品も
+個人で企画し、生成 AI（Claude Code）を使って開発した 11 作品です。
+スマートフォンアプリ（Flutter・React Native）・Web サービス（Node.js）・ゲーム（Unity・Unreal Engine）・AI（Python / PyTorch）と分野は違いますが、どの作品も
 **「ロジックを UI から切り離してテストする」「やらないことを決めて理由を残す」「設計を図と文書で説明できるようにする」**
 ことを大切にしています。
 
@@ -111,16 +111,22 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 2026 年 10 月 24〜31 日 ・ 未公開・開発中（実機での動作確認はまだ）<br>
 <a href="https://github.com/sawai-naoki-portfolio/fanT/blob/main/docs/README.md">設計資料</a>
 </td>
-<td width="33%" valign="top"></td>
+<td width="33%" valign="top">
+<h3><a href="https://github.com/sawai-naoki-portfolio/RealTennis">RealTennis</a></h3>
+物理ベースのリアルなテニスゲーム。ボール物理とスコアなどのシミュレーションを分けたモジュール構成で、設計書を先に更新してから実装。<br>
+<b>Unreal Engine 5.8.4 / C++</b> ・ C++ 167 ファイル・約 16,000 行 ・ 自動テスト（CQTest の <code>TEST_METHOD</code>）307 件<br>
+2026 年 11 月 4〜22 日 ・ 未公開・開発中（画像・Content は含まない）<br>
+<a href="https://github.com/sawai-naoki-portfolio/RealTennis/blob/main/Docs/README.md">設計ドキュメント</a>
+</td>
 <td width="33%" valign="top"></td>
 </tr>
 </table>
 
-公開状況は作品ごとに違います。**簿記単は [Google Play で公開済み](https://play.google.com/store/apps/details?id=com.bokitan.bookkeeping_vocabulary_notebook)** です。それ以外の 9 作品は、ストアや Web ではまだ公開していません（VECTOR と Privacy Asset Checker は Google Play 公開準備中、fanT は開発中）。各リポジトリの README に、手元で動かす手順があります。
+公開状況は作品ごとに違います。**簿記単は [Google Play で公開済み](https://play.google.com/store/apps/details?id=com.bokitan.bookkeeping_vocabulary_notebook)** です。それ以外の 10 作品は、ストアや Web ではまだ公開していません（VECTOR と Privacy Asset Checker は Google Play 公開準備中、fanT と RealTennis は開発中）。各リポジトリの README に、手元で動かす手順があります。
 
 ### 開発の進め方（生成 AI の活用）
 
-10 作品とも、生成 AI のコーディングアシスタント **Claude Code** を使って開発しました。
+11 作品とも、生成 AI のコーディングアシスタント **Claude Code** を使って開発しました。
 
 | | 内容 |
 |---|---|
@@ -140,10 +146,11 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 | 簿記単 | 2025 年 5〜7 月（初期開発）、2026 年 7 月・10 月（改修・リリース準備・ドキュメント整備） |
 | ピース・オブ・ケーキ | 2026 年 10 月 31 日〜11 月 1 日 |
 | fanT | 2026 年 10 月 24〜31 日 |
+| RealTennis | 2026 年 11 月 4〜22 日（元のリポジトリの 192 コミットの記録） |
 
 ### PR 運用の実例
 
-元の開発リポジトリ（非公開の RealTennis。Unreal Engine 5.8 / C++。公開版への追加は**準備中**）では、`main` へは PR 経由でのみ変更を入れる規約で開発しています。対応内容ごとにブランチを切り、細かくコミットし、CI（文書・設定の検査と C++ のビルド・自動テスト）が通ってからマージします。PR 番号は #191 まで進んでいます（2026 年 11 月 22 日時点）。
+公開版は [RealTennis](https://github.com/sawai-naoki-portfolio/RealTennis)（Unreal Engine 5.8 / C++。履歴は移していません）です。元の開発リポジトリ [dorachan121/RealTennis](https://github.com/dorachan121/RealTennis)（公開）では、`main` へは PR 経由でのみ変更を入れる規約で開発しています。対応内容ごとにブランチを切り、細かくコミットし、CI（文書・設定の検査と C++ のビルド・自動テスト）が通ってからマージします。PR 番号は #191 まで進んでいます（2026-11-04〜11-22 の 192 コミット）。
 
 | PR | タイトル | 何を直したか／なぜか（タイトルから読み取れる範囲） |
 |---|---|---|
@@ -175,6 +182,7 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 | [簿記単](https://github.com/sawai-naoki-portfolio/bokitan-app) | モバイル | Flutter, Riverpod, shared_preferences, AdMob, GitHub Actions | 起動直後の操作で保存データが巻き戻らない読み込み待ち、同梱データを直接検証するテスト（貸借一致・ID 重複）で見つけた問題データの誤りを修正、誤答候補を混ぜた最低 10 択の勘定科目で消去法を防止、JSON のパースを別 isolate へ、広告 ID をソースに置かない注入 |
 | [ピース・オブ・ケーキ](https://github.com/sawai-naoki-portfolio/aPieceOfCake) | ゲーム | Unity 6, C# | Unity 非依存で決定的なルール（HTML 試作品とフレーム単位で一致）、全 5 ステージを参照解法で自動プレイして ★3 を確認するテスト、不正なステージデータの拒否、3D モデルを Blender スクリプトで生成 |
 | [fanT](https://github.com/sawai-naoki-portfolio/fanT) | モバイル / Web / サーバー | TypeScript, Expo SDK 58 (React Native), Skia (SkSL), Cloud Functions, Firebase, zod, pnpm + Turborepo, GitHub Actions | アプリとフィルムスタジオで同じシェーダーを使う設計、配信コンテンツと API の型を zod で検証、カメラ・描画ライブラリを `engine/` に限定して lint で強制、CI 5 本（検査・コンテンツ配信・ネイティブビルド・スクリーンショット・依存関係の監査） |
+| [RealTennis](https://github.com/sawai-naoki-portfolio/RealTennis) | ゲーム | Unreal Engine 5.8.4, C++（ブループリントも併用）, Python, GitHub Actions | ボール物理・スコアのシミュレーション（`TennisSim`）とゲーム本体（`Tennis`）をモジュールで分離、C++ 167 ファイルに対し自動テスト 307 件、設計書（`Docs/`・Markdown 68 ファイル）を先に更新してから実装、文書・設定の検査を行う CI |
 
 ### スキル
 
@@ -182,10 +190,10 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 |---|---|---|
 | モバイル（Flutter / Dart、Expo / React Native） | Riverpod 2 / 3、SQLite + SQLCipher（AES-256）、Hive、Keychain / Keystore、生体認証・ローカル通知・QR、アプリ内課金・AdMob、MethodChannel（Kotlin / Swift）、Expo・VisionCamera・Skia（SkSL シェーダー） | Privacy Asset Checker・テク単・PromptVault・簿記単・fanT |
 | Web・サーバー（Node.js / TypeScript） | Express 5、WebSocket、node:sqlite・マイグレーション、scrypt・セッション・OAuth 2.0、CSRF / XSS / CSP 対策、Canvas・Web Audio、ノード式ビジュアルプログラミングの実行器、Docker・Caddy、Cloud Functions・Firebase・zod、pnpm + Turborepo のモノレポ | LiveDesign・fanT |
-| ゲーム（Unity / C#） | Unity 6・URP・uGUI、Input System、自前のボール物理・先読み AI、手続き的生成（メッシュ・テクスチャ・音）、テンプレートメソッド・SOLID、HMAC によるセーブ改ざん検知、決定的なルールエンジンと参照解法による自動プレイ | VECTOR CASINO RESORT・スポーツスタジアム・ピース・オブ・ケーキ |
+| ゲーム（Unity / C#、Unreal Engine / C++） | Unity 6・URP・uGUI、Input System、自前のボール物理・先読み AI、手続き的生成（メッシュ・テクスチャ・音）、テンプレートメソッド・SOLID、HMAC によるセーブ改ざん検知、決定的なルールエンジンと参照解法による自動プレイ、Unreal Engine 5.8・C++ のシミュレーションと自動テスト（CQTest） | VECTOR CASINO RESORT・スポーツスタジアム・ピース・オブ・ケーキ・RealTennis |
 | AI・機械学習（Python / PyTorch） | Transformer（Multi-Head Latent Attention・Sparse MoE・RoPE・KV キャッシュ・投機的デコード）、事前学習・SFT・DPO・GRPO・LoRA、RAG（BM25・FAISS・RRF・Self-RAG）、TTS（ニューラル音声コーデック・Flow Matching）、画像生成（VAE・DiT・Rectified Flow）、評価設計、FastAPI・WebSocket | SWING-LLM |
 | 数理・アルゴリズム | 確率の全列挙・動的計画法、後ろ向き帰納（最善手）、モンテカルロ検証、表記ゆれの正規化、PBKDF2・AES-GCM | VECTOR CASINO RESORT・テク単・Privacy Asset Checker |
-| 品質・開発プロセス | 単体・結合・ウィジェット・PlayMode テスト、GitHub Actions（CI）、構造テスト（依存の向き）、静的解析、要件定義・画面定義・UML、生成 AI を使った開発 | 全作品（CI は VECTOR・LiveDesign・Privacy Asset Checker・テク単・PromptVault・SWING-LLM・簿記単・fanT とスポーツスタジアム（Unity 非依存の部分のみ）、PlayMode テストはスポーツスタジアム、構造テストは LiveDesign） |
+| 品質・開発プロセス | 単体・結合・ウィジェット・PlayMode テスト、GitHub Actions（CI）、構造テスト（依存の向き）、静的解析、要件定義・画面定義・UML、生成 AI を使った開発 | 全作品（CI は VECTOR・LiveDesign・Privacy Asset Checker・テク単・PromptVault・SWING-LLM・簿記単・fanT と RealTennis（文書・設定・Python の検査のみ。C++ のテストは公開版の CI に含まない）、スポーツスタジアム（Unity 非依存の部分のみ）、PlayMode テストはスポーツスタジアム、構造テストは LiveDesign） |
 
 ### テストの実行結果（公開版の作成時に再実行したもの、および GitHub Actions で成功を確認したもの）
 
@@ -203,7 +211,7 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 | fanT | GitHub Actions `ci.yml` | main で成功。モバイルの Vitest は 50 ファイル・257 テストすべて成功（`docs/requirements/08-implementation-status.md`）。手元では再実行していない |
 
 VECTOR CASINO RESORT・LiveDesign・SWING-LLM・簿記単・fanT は、プッシュごとに GitHub Actions でも同じテストを実行しています（上のバッジ）。Privacy Asset Checker・テク単・PromptVault も、GitHub Actions（`test.yml`）で `flutter analyze` と `flutter test` を実行し、各 main で成功を確認しました。スポーツスタジアムの CI（`core.yml`）が実行するのは、Unity 非依存の `TennisScoreTests`（9 件）だけです。
-再実行していないのは、Unity の EditMode / PlayMode テスト（スポーツスタジアム、ピース・オブ・ケーキ、VECTOR の Unity 側）と、ピース・オブ・ケーキの全テストです（作業環境に Unity がないため）。ピース・オブ・ケーキ（EditMode テスト 53 件）の件数・行数は、ソースを静的に数えた値です（内訳は `Docs/06_Testing.md`）。テストの内容と件数は、各リポジトリの `Doc/test-report.md`（ピース・オブ・ケーキは `Docs/06_Testing.md`）にあります。
+再実行していないのは、Unity の EditMode / PlayMode テスト（スポーツスタジアム、ピース・オブ・ケーキ、VECTOR の Unity 側）と、ピース・オブ・ケーキの全テストです（作業環境に Unity がないため）。RealTennis の自動テスト 307 件（`TEST_METHOD` の数）も、Unreal Engine がないため実行していません。公開版の CI は文書・設定・Python の検査で、C++ のビルドとテストは含みません。ピース・オブ・ケーキ（EditMode テスト 53 件）の件数・行数は、ソースを静的に数えた値です（内訳は `Docs/06_Testing.md`）。テストの内容と件数は、各リポジトリの `Doc/test-report.md`（ピース・オブ・ケーキは `Docs/06_Testing.md`）にあります。
 
 <details>
 <summary><b>公開にあたって</b></summary>
