@@ -30,7 +30,7 @@
 <h3><a href="https://github.com/sawai-naoki-portfolio/vector">VECTOR CASINO RESORT</a></h3>
 10 のオリジナルカジノゲームとカジノ RPG。配当を全列挙・動的計画法（厳密に解けないものはシミュレーション）で検証し、最善に近い打ち方でもハウスがわずかに有利になるよう数学で設計。<br>
 <b>Unity 6 / C#</b> ・ C# 約 28,000 行 ・ テスト 152 件 ・ CI<br>
-2025 年 4 月に原型、2026 年 10 月に作り直し ・ 未公開<br>
+2025 年 4 月に原型、2026 年 10 月に作り直し ・ 未公開（Google Play 公開準備中）<br>
 <a href="https://github.com/sawai-naoki-portfolio/vector/blob/main/Doc/README.md">設計ドキュメント</a>
 </td>
 <td width="33%" valign="top">
@@ -116,7 +116,7 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 </tr>
 </table>
 
-公開状況は作品ごとに違います。**簿記単は [Google Play で公開済み](https://play.google.com/store/apps/details?id=com.bokitan.bookkeeping_vocabulary_notebook)** です。それ以外の 9 作品は、ストアや Web ではまだ公開していません（Privacy Asset Checker は Google Play 公開準備中、fanT は開発中）。各リポジトリの README に、手元で動かす手順があります。
+公開状況は作品ごとに違います。**簿記単は [Google Play で公開済み](https://play.google.com/store/apps/details?id=com.bokitan.bookkeeping_vocabulary_notebook)** です。それ以外の 9 作品は、ストアや Web ではまだ公開していません（VECTOR と Privacy Asset Checker は Google Play 公開準備中、fanT は開発中）。各リポジトリの README に、手元で動かす手順があります。
 
 ### 開発の進め方（生成 AI の活用）
 
@@ -143,16 +143,15 @@ LLM・音声合成・画像生成の 3 つの AI を、既製のモデルを使�
 
 ### PR 運用の実例
 
-元の開発リポジトリ（非公開の RealTennis。Unreal Engine 5.8 / C++。公開版への追加は**準備中**）では、`main` へは PR 経由でのみ変更を入れる規約で開発しています。対応内容ごとにブランチを切り、細かくコミットし、CI（文書・設定の検査と C++ のビルド・自動テスト）が通ってからマージします。PR 番号は #93 まで進んでいます。
+元の開発リポジトリ（非公開の RealTennis。Unreal Engine 5.8 / C++。公開版への追加は**準備中**）では、`main` へは PR 経由でのみ変更を入れる規約で開発しています。対応内容ごとにブランチを切り、細かくコミットし、CI（文書・設定の検査と C++ のビルド・自動テスト）が通ってからマージします。PR 番号は #191 まで進んでいます（2026 年 11 月 22 日時点）。
 
 | PR | タイトル | 何を直したか／なぜか（タイトルから読み取れる範囲） |
 |---|---|---|
-| #85 | ci: 画面なしのテストの実行で MCP のサーバーを起動しない | CI の、画面なしでのテスト実行時に MCP のサーバーを起動しないようにした |
-| #87 | refactor: 規約と実装の食い違いをなくす（rpm の変換・SimDt・データの名前・CI の記述） | 規約と実装が食い違っていた箇所（rpm の変換・SimDt・データの名前・CI の記述）をそろえた |
-| #88 | feat: 打点の探索の設計と到達時間 TennisReach::TimeToReach（W-3.3 その 1） | 打点の探索の設計と、到達時間 `TennisReach::TimeToReach` を追加した（W-3.3 の第 1 弾） |
-| #90 | fix: ボールを TG_PrePhysics で最初に進め、選手をその後に処理する（ARCH-01 §5） | ボールを `TG_PrePhysics` で先に進め、選手をその後に処理する順序にした（ARCH-01 §5 に関わる修正） |
-| #92 | docs: モジュール設計とクラス図を実装に合わせる（ARCH-02・UML-02） | モジュール設計とクラス図を、実装に合わせて更新した |
-| #93 | build: テストのモジュールは unity build でまとめない | テストのモジュールを unity build でまとめないようにした |
+| #187 | docs: サーブの理想打点をトス頂点の5 cm下に統一 | サーブの理想打点を、トス頂点の 5 cm 下に統一した |
+| #188 | art: 試合用センターコートAとコートサイドの備品を制作 | 試合用のセンターコート A と、コートサイドの備品を制作した |
+| #189 | feat: サーブとラリーの入力 Context を切り替える（W-3.7） | サーブとラリーで入力 Context を切り替えるようにした（W-3.7） |
+| #190 | docs: サーブの打点とトスの横ずれから球速を決める基準を定義 | サーブの打点とトスの横ずれから、球速を決める基準を定義した |
+| #191 | art: クレー・芝・屋内・高地のスタジアムと練習場を制作 | クレー・芝・屋内・高地のスタジアムと練習場を制作した |
 
 公開版の作品にも、CI の追加などを PR 経由でマージした記録があります。
 
